@@ -1,0 +1,133 @@
+/******文件信息显示区******/
+.center-binfo-wrap {
+	margin: 0;
+	width: 80%;
+	height: auto;
+	float: left;
+}
+.center-binfo-wrap .center-binfo-entity {
+	margin: 0 10px;
+	background-color: white;
+	box-shadow: 3px 3px 3px #888888;
+}
+
+div.show-style {
+	display: table;
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	border-bottom: 1px solid #eee;
+}
+div.show-style button {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	float: left;
+}
+div.show-content {
+	height: 80%;
+}
+
+/*display: list style*/
+.list-style {
+	margin: 0px;
+	padding: 0px;
+}
+.list-style ul li {
+	display: inline-block;
+	width: 45%;
+	height: auto;
+	margin-right: 5%;
+	margin-top: 10px;
+	background-color: #ccd0d4;
+}
+.list-style ul li > img {
+	background-image: url('../images/testpic.png');
+	/*image-rendering: url('/Users/zhouming/Desktop/templates/images/testpic.png');*/
+	width: 20%;
+	height: 100px;
+	margin: 0px;
+	border: 1px solid gray;
+	border-radius: 7px;
+	display: table;
+	float: left;
+}
+.list-style ul li > div {
+	width: 80%;
+	height: auto;
+	display: table;
+	float: left;
+}
+.list-style ul li > div > h6 {
+	width: 40%;
+	padding-left: 10%;
+	display: inline-block;
+}
+.list-style ul li > div> span {
+	width: 60%;
+	padding-left: 10%;
+	display: inline-block;
+}
+.list-style ul li > div > summary {
+	width: 100%;
+	padding-left: 10%;
+	display: inline-block;
+}
+
+
+/*display: grid style*/
+.grid-style {
+	margin: 0px;
+	padding: 0px;
+	display: hidden;
+}
+.grid-style ul li {
+	display: inline-block;
+	width: 20%;
+	height: 20%;
+	background-color: #ffff00;
+}
+
+
+
+/******数据及应用区******/
+.center-dinfo-wrap {
+	margin: 0;
+	width: 20%;
+	height: auto;
+	float: left;
+}
+.center-dinfo-wrap .center-dinfo-entity {
+	margin: 0;
+	margin-right: 10px;
+	padding: 0px;
+/*	background-color: white;
+	box-shadow: 3px 3px 3px #888888;*/
+}
+/*数据统计块*/
+.data-panel img {
+	width: 100%;
+	height: 130px;
+	border: 2px solid #ffff00;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	display: block;
+}
+.data-panel span {
+	margin-bottom: 5px;
+	display: block;
+}
+.data-panel  ul.hor > li:hover {
+	background-color: rgb(252, 255, 183);
+}
+
+.data-panel ul.vert > li > a {
+	width: 75%;
+	float: left;
+}
+.data-panel ul.vert > li > span {
+	width: 25%;
+	float: left;
+}
