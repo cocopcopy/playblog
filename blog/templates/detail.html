@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Detail</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1><a href="{% url 'blog:detail' article.pk %}">{{ article.title }}</a></h1>
+	<h2>{{ article.last_modified_time | date: 'Y/n/d' }}</h2>
+	<div>
+		{{ article.body | safe }}
+	</div>
+</body>
+</html>
