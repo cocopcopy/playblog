@@ -1,0 +1,43 @@
+<div id="paginavi">
+	<!-- 如果还有上一页，显示上一页的按钮 -->
+	{% if article_list.has_previous %}
+		<span><a href="?page={{ article_list.previous_page_number }}">Pre</a></span>
+	{% endif %}
+	
+	<!-- 如果当前页面是第一页，使用当前页style，但是同时得保证第一页始终为一个链接 -->
+	{% if first_page == current_page %}
+		<span class="current"><a href="?page=1">1</a></span>
+	{% endif %}
+
+	<!-- 如果visible的页面显示第一个不是第2页，那么需要显示省略号 -->
+	{% if page_first > 2 %}
+		<span>...</span>
+	{% endif %}
+
+	<!-- 显示visible列表中的所有页面值 -->
+	{% for page in pages %}
+		{% if page == current_page %}
+			<span class="current">{{ page }}</span>
+		{% else %}
+			<span><a href="?page={{ page }}">{{ page }}</a></span>
+		{% endif %}
+	{% endfor %}
+
+	<!-- 如果visible列表的最后一个和last_page还相差1个以上的page，显示省略号 -->
+	{% if pages_last < last_page %}
+		<span>...</span>
+	{% endif %}
+
+	<!-- 如果最后一个页面不是1 -->
+	{% if last_page != 1 %}
+		{% if last_page == current_page %}
+			<span class="current"><a href="?page={{ last_page }}">{{ last_page }}</a></span>
+		{% else %}
+			<span><a href="?page={{ last_page }}">{{ last_page }}</a></span>
+		{% endif %}
+	{% endif %}
+
+	{% if article_list.has_next %}
+		<span><a href="?page={{ article_list.next_page_number }}">Pre</a></span>
+	{% endif %}
+</div>

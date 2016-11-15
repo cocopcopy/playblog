@@ -2,7 +2,7 @@ from django import template
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
-register = template.library()
+register = template.Library()
 
 
 @register.simple_tag(takes_context=True)
@@ -37,10 +37,10 @@ def paginate(context, page_list, per_num):
 	context['article_list'] = wanted_list
 
 	try:
-		context['first_page'] = page[0]
-		context['last_page'] = page[-1] + 1
+		context['page_first'] = pages[0]
+		context['page_last'] = pages[-1] + 1
 	except IndexError:
-		context['first_page'] = 1
-		context['last_page'] = 2
+		context['page_first'] = 1
+		context['page_last'] = 2
 
 	return ''
